@@ -16,8 +16,8 @@
 			<em><h:outputLabel value="#{applicationInfo.slogan}" /></em>
 	Enter a plant name and then choose Search: 
 	<h:form>
-				<h:inputText value="#{plantSearch.name}" />
-				<h:commandButton value="Submit" action="search" />
+				<p:inputText value="#{plantSearch.name}" />
+				<p:commandButton value="Submit" actionListener="search" />
 			</h:form>
 			<h:link value="Contactus" outcome="contactUs" />
 
