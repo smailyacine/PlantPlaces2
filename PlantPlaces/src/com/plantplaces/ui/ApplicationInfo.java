@@ -1,6 +1,9 @@
 package com.plantplaces.ui;
 
-import javax.faces.bean.ManagedBean;
+
+
+
+import javax.annotation.ManagedBean;
 import javax.inject.Named;
 
 import org.springframework.context.annotation.Scope;
@@ -10,7 +13,7 @@ import org.springframework.context.annotation.Scope;
 @Scope("session")
 public class ApplicationInfo {
 
-	String slogan="Promoting Plant Diversity Through Education";
+	String slogan="Promoting Plant Diversity Through Education ";
 
 	public String getSlogan() {
 		return slogan;
