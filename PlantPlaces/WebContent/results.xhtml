@@ -10,9 +10,9 @@
 <h:body>
 	<h1>welcome to plant places.com</h1>
 	<em><h:outputLabel value="#{applicationInfo.slogan}" /></em>
-	<h2>plant results for:<p:outputLabel value="#{plantSearch.name}"/></h2>
+	<h2>plant results for:<p:outputLabel value="#{plant.name}"/></h2>
 	<h:form>
-		<h:inputText value="#{plantSearch.name}"/>
+		<h:inputText value="#{plant.name}"/>
 		<h:commandButton value="Submit" action="#{searchPlants.execute}"/>
 	</h:form>
 	<h:link value="Contactus" outcome="contactUs"/>

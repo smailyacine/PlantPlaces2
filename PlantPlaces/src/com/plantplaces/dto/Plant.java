@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Scope;
 @Named
 @ManagedBean
 @Scope("session")
-public class PlantSearch {
+public class Plant {
 
 	String name;
 
@@ -20,5 +20,13 @@ public class PlantSearch {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	@Override//we overide the tostring method of the Object class to 
+	//get a more readable output 
+	public String toString() {
+		return name;
+	}
+	
+	
 	
 }

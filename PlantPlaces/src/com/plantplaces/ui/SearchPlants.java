@@ -1,12 +1,15 @@
 package com.plantplaces.ui;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.annotation.ManagedBean;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.springframework.context.annotation.Scope;
 
-import com.plantplaces.dto.PlantSearch;
+import com.plantplaces.dto.Plant;
 
 @Named
 @ManagedBean
@@ -14,7 +17,7 @@ import com.plantplaces.dto.PlantSearch;
 public class SearchPlants {
 
 	@Inject
-	private PlantSearch plant;
+	private Plant plant;
 	
 	public String execute(){
 		if(plant!=null && plant.getName().equalsIgnoreCase("Redbud")){
@@ -25,11 +28,32 @@ public class SearchPlants {
 		
 	}
 
-	public PlantSearch getPlant() {
+	public Plant getPlant() {
 		return plant;
 	}
 
-	public void setPlant(PlantSearch plant) {
+	public void setPlant(Plant plant) {
 		this.plant = plant;
+	}
+
+	public List<Plant> completePlants(String query){
+			ArrayList<Plant> allPlants=new ArrayList<Plant>(); 
+		
+			//create plants and add theml to the collection
+			Plant redbud=new Plant(); 
+			redbud.setName("Eastern Redbud");
+			allPlants.add(redbud);
+			
+			Plant pawapaw=new Plant(); 
+			pawapaw.setName("Paw Paw");
+			allPlants.add(pawapaw);
+			
+			Plant nasturtium=new Plant(); 
+			nasturtium.setName("nasturtiom");
+			allPlants.add(nasturtium);
+			
+			
+			return allPlants;
+		
 	}
 }
