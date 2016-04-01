@@ -14,6 +14,14 @@ public class PlantService implements IPlantService {
 
 	@Inject
 	IPlantDAO plantDAO;
+	public IPlantDAO getPlantDAO() {
+		return plantDAO;
+	}
+
+	public void setPlantDAO(IPlantDAO plantDAO) {
+		this.plantDAO = plantDAO;
+	}
+
 	private List<Plant> allPlants;
 
 	@Override
